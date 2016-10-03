@@ -246,7 +246,6 @@
 			children = (
 				7A8FB1061D9F8612009F31E5 /* Controller */,
 				7A8FB1071D9F8612009F31E5 /* Model */,
-				7A8FB1081D9F8612009F31E5 /* View */,
 			);
 			path = "Hall（购彩大厅）";
 			sourceTree = "<group>";
@@ -265,13 +264,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		7A8FB1081D9F8612009F31E5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		7A8FB1091D9F8612009F31E5 /* Help（帮助） */ = {

@@ -8,11 +8,22 @@
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
-#endif /* PrefixHeader_pch */
 #import "UIBarButtonItem+ZCExtension.h"
 #import "UIView+ZCExtension.h"
+#import "NSString+ZCExtension.h"
+#endif /* PrefixHeader_pch */
+
+#ifdef DEBUG
+#define ZCLog(...) NSLog(__VA_ARGS__)
+#else
+#define ZCLog(...)
+#endif
+
 #define ZCKeyWindow [UIApplication sharedApplication].keyWindow
 #define ZCScreenBounds [UIScreen mainScreen].bounds
 #define ZCScreenW [UIScreen mainScreen].bounds.size.width
 #define ZCScreenH [UIScreen mainScreen].bounds.size.height
 #define ZCColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+#define ZCAlphaColor(r,g,b,d) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(d)/1.0]
+#define ZCNoteCenter [NSNotificationCenter defaultCenter]
+#define ZCLogFunc ZCLog(@"%s",__func__)

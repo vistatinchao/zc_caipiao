@@ -10,5 +10,6 @@
 
 @interface UIBarButtonItem (ZCExtension)
 +(instancetype)itemWithImage:(NSString *)image highImage:(NSString *)highImage target:(id)target action:(SEL)action;
++(instancetype)itemWithTitle:(NSString *)title image:(NSString *)image target:(id)target action:(SEL)action;
 
 @end

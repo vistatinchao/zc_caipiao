@@ -37,21 +37,14 @@
 - (void)tabBarAddChiliViewController :(UIViewController *)vc Image:(NSString *)image SelectImage:(NSString *)selectImage Title:(NSString *)title
 {
     
-    vc.view.backgroundColor = [UIColor redColor];
     ZCCustomNavBarViewController *nvc = [[ZCCustomNavBarViewController alloc]initWithRootViewController:vc];
     [self addChildViewController:nvc];
     vc.tabBarItem.image = [[UIImage imageNamed:image]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc.tabBarItem.selectedImage = [[UIImage imageNamed:selectImage]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc.navigationItem.title = title;
-    NSLog(@"%zd",self.viewControllers.count);
 
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    NSLog(@"%@-------%zd",self.viewControllers,self.viewControllers.count);
-    
-}
+
 
 @end
