@@ -10,7 +10,8 @@
 #import "ZCGirlView.h"
 #import "ZCDownView.h"
 @interface ZCHallVC ()
-
+@property (nonatomic,assign)BOOL showDownView;
+@property (nonatomic,weak)ZCDownView *downView;
 @end
 
 @implementation ZCHallVC
@@ -30,9 +31,31 @@
 
 - (void)bonceAnimale
 {
-    ZCDownView *downView = [[ZCDownView alloc]initWithFrame:CGRectMake(0, 64, ZCScreenW, 200)];
-    [self.view addSubview:downView];
+    self.showDownView=!self.showDownView;
+    if (self.showDownView) {
+        [self.view addSubview:self.downView];
+    }else{
+        [UIView animateWithDuration:1.0 animations:^{
+            self.downView.y = -ZCScreenH;
+        } completion:^(BOOL finished) {
+            [self.downView removeFromSuperview];
+            self.downView = nil;
+        }];
+       
+    }
+    
 }
+
+- (ZCDownView *)downView
+{
+    if (!_downView) {
+        ZCDownView *downView = [[ZCDownView alloc]initWithFrame:CGRectMake(0, 0, ZCScreenW, 200)];
+        [self.view addSubview:downView];
+        self.downView  = downView;
+    }
+    return _downView;
+}
+
 
 - (void)activity
 {

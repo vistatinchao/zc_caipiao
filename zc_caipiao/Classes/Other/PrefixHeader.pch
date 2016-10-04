@@ -23,6 +23,8 @@
 #define ZCScreenBounds [UIScreen mainScreen].bounds
 #define ZCScreenW [UIScreen mainScreen].bounds.size.width
 #define ZCScreenH [UIScreen mainScreen].bounds.size.height
+#define ZCNavHight 64
+#define ZCTabBarHeight 49
 #define ZCColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
 #define ZCAlphaColor(r,g,b,d) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(d)/1.0]
 #define ZCNoteCenter [NSNotificationCenter defaultCenter]
