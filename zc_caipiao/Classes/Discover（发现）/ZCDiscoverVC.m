@@ -9,7 +9,8 @@
 #import "ZCDiscoverVC.h"
 
 @interface ZCDiscoverVC ()
-
+@property (nonatomic,weak)UITableView *tableView;
+@property (nonatomic,strong)NSArray *dataSource;
 @end
 
 @implementation ZCDiscoverVC

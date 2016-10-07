@@ -62,7 +62,7 @@
     UIView *shandowView = [[UIView alloc]initWithFrame:ZCScreenBounds];
     [ZCKeyWindow addSubview:shandowView];
     
-    shandowView.backgroundColor = [UIColor colorWithRed:102/255.0 green:102/255.0 blue:102/255.0 alpha:0.4];
+    shandowView.backgroundColor = ZCAlphaColor(102, 102, 102, 0.4);
     __weak ZCGirlView *girlView = [ZCGirlView girlView];
     [shandowView addSubview:girlView];
     girlView.size = CGSizeMake(200, 200);
